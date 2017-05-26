@@ -16,7 +16,7 @@ export const featuresReducer = (init) => {
 }
 
 export const getFlag = (state, reducerKey = 'features') => name => {
-  const flags = state.[reducerKey];
+  const flags = state[reducerKey];
   const flag = flags[name];
   if (typeof flag === 'function') {
     return flag(flags);
