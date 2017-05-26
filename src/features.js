@@ -5,9 +5,9 @@ export const updateFlags = payload => ({
   payload,
 })
 
-export const featuresReducer = (init) => {
-  const availableFlags = Object.keys(init);
-  return (state = {}, action) => {
+export const featuresReducer = (initialState) => {
+  const availableFlags = Object.keys(initialState);
+  return (state = initialState, action) => {
     if (action.type === FLAG_UPDATE) {
       return { ...state, ...action.payload };
     }
